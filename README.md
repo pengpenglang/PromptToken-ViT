@@ -26,4 +26,4 @@
 ````
 # 其他文件
 - [PPT在线查看](https://www.canva.cn/design/DAFjngSSw-4/NuFrB6opqQzES74DWigaZQ/edit?utm_content=DAFjngSSw-4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-- [文档 密码:hmrs](https://wwtc.lanzoum.com/b01qt4tdi)
+- [文档&权重文件](https://pan.baidu.com/s/1oF88oYn44TAGrdj5fB1ARw?pwd=9cx7)
