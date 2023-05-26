@@ -25,5 +25,5 @@
 └── README.md
 ````
 # 其他文件
-- [PPT](https://www.canva.cn/design/DAFjngSSw-4NuFrB6opqQzES74DWigaZQ/edit?utm_content=DAFjngSSw-4utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [PPT在线查看](https://www.canva.cn/design/DAFjngSSw-4/NuFrB6opqQzES74DWigaZQ/edit?utm_content=DAFjngSSw-4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - [文档 密码:hmrs](https://wwtc.lanzoum.com/b01qt4tdi)
