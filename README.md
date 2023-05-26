@@ -21,7 +21,7 @@
 ├── test.py             # 模型指标评测
 ├── test_box.py         # 模型定位框评测(不支持调整batch_size)
 ├── train.py            # 模型训练
-├── transfer.py         # 迁移学习续联
+├── transfer.py         # 迁移学习训练
 └── README.md
 ````
 # 其他文件
