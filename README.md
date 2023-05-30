@@ -1,4 +1,19 @@
-# 文件说明
+## 📂毕设信息
+```python
+# author: pengpenglang
+# language: pytorch
+# data: 2023-5-25
+# description: 基于ImageNet数据集的目标分类与定位任务联合优化
+```
+## 📝任务描述
+- 视觉任务: 单目标分类与定位任务联合优化
+- 设计思路: 模拟人眼的注意力机制并利用两个任务视觉特征分布上的相似性建立联合优化模型
+- 具体做法: 通过联合训练通用特征提取器增强视觉特征能力并引入提示学习动态完成多个任务
+
+## 📚模型架构
+<img src="./README.assets/架构图.png" weight=400px width=400px>
+
+## 文件说明
 ```bash
 ./
 ├── images              # 存放生成的所有图像
@@ -24,6 +39,14 @@
 ├── transfer.py         # 迁移学习训练
 └── README.md
 ````
-# 其他文件
+## 运行方法
+```bash
+git clone git@github.com:pengpenglang/PromptToken-ViT.git
+cd PromptToken-ViT
+pip install -r requirements.txt
+bash run.sh train.py   # 运行训练脚本
+```
+
+## 相关文件
 - [PPT在线查看](https://www.canva.cn/design/DAFjngSSw-4/NuFrB6opqQzES74DWigaZQ/edit?utm_content=DAFjngSSw-4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - [文档&权重文件](https://pan.baidu.com/s/1oF88oYn44TAGrdj5fB1ARw?pwd=9cx7)
