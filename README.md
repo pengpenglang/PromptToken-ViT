@@ -32,7 +32,7 @@
 │   ├── train_epoch.py  # 每轮训练函数
 │   └── visualize.py    # 不用管
 ├── predict.py          # 模型单张图像预测(不支持调整batch_size)
-├── analyse.py          # 模型分析
+├── analyse.py          # 模型分析(不支持调整batch_size)
 ├── test.py             # 模型指标评测
 ├── test_box.py         # 模型定位框评测(不支持调整batch_size)
 ├── train.py            # 模型训练
