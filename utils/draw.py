@@ -22,9 +22,9 @@ def gt_patch(img_path, sequence, box):
     可视化标注信息生成的patch监督序列
     
     Parameters:
-    img_path - 图片路径
-    sequence - 14*14的矩阵,每个元素为0或1
-    box - 14*14*4的矩阵,每个元素为xmin, ymin, xmax, ymax
+        img_path - 图片路径
+        sequence - 14*14的矩阵,每个元素为0或1
+        box - 14*14*4的矩阵,每个元素为xmin, ymin, xmax, ymax
     '''
     img = cv2.imread(img_path)
     img = cv2.resize(img, (224, 224))
@@ -42,9 +42,9 @@ def gt_box(img_path, forecast, box):
     可视化由patch监督序列恢复的box与标注信息
     
     Parameters:
-    img_path - 图片路径
-    sequence - 14*14的矩阵,每个元素为0或1
-    box: 14*14*4的矩阵,每个元素为xmin, ymin, xmax, ymax
+        img_path - 图片路径
+        sequence - 14*14的矩阵,每个元素为0或1
+        box: 14*14*4的矩阵,每个元素为xmin, ymin, xmax, ymax
     '''
     img = cv2.imread(img_path)
     img = cv2.resize(img, (224, 224))
@@ -60,11 +60,11 @@ def tensor2im(image_tensor, imtype=np.uint8):
     将数据预处理后tensor格式的图像转换为原RGB的numpy格式
 
     Parameters:
-    image_tensor - 输入的tensor,维度为CHW,注意这里没有batch size的维度
-    imtype - 转换后的numpy的数据类型
+        image_tensor - 输入的tensor,维度为CHW,注意这里没有batch size的维度
+        imtype - 转换后的numpy的数据类型
     
     Returns:
-    image_numpy - 转换后的numpy格式的图像
+        image_numpy - 转换后的numpy格式的图像
     '''
     mean = [0.485, 0.456, 0.406]  # dataLoader中设置的mean参数，需要从dataloader中拷贝过来
     std = [0.229, 0.224, 0.225]  # dataLoader中设置的std参数，需要从dataloader中拷贝过来
@@ -90,8 +90,8 @@ def contrast_box(img_tensor, forecast, box):
     可视化box和gt_box
     
     Parameters:
-    img_tensor - 图片tensor存放预测box坐标的list
-    forecast - 存放预测box坐标的list
+        img_tensor - 图片tensor存放预测box坐标的list
+        forecast - 存放预测box坐标的list
     '''
     img = tensor2im(img_tensor)
     img_cv = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
@@ -108,10 +108,10 @@ def forecast_box(img_tensor, output, sequence, patch_threshold):
     (设定这个函数的目的是contrast_box函数无法可视化不同阈值的效果)
     
     Parameters:
-    img_tensor - 数据预处理过的tensor格式的图像
-    output - 14*14的矩阵,每个元素为概率值
-    sequence: 14*14的矩阵,每个元素为0或1
-    patch_threshold: patch激活的阈值,是一个值
+        img_tensor - 数据预处理过的tensor格式的图像
+        output - 14*14的矩阵,每个元素为概率值
+        sequence: 14*14的矩阵,每个元素为0或1
+        patch_threshold: patch激活的阈值,是一个值
     '''
     img = tensor2im(img_tensor)
     for threshold in patch_threshold:
@@ -131,10 +131,10 @@ def forecast_patch(img_tensor, output, sequence, patch_threshold):
     可视化模型预测的patch与对应的监督信息
     
     Parameters:
-    img_tensor - 数据预处理过的tensor格式的图像
-    output - 14*14的矩阵,每个元素为概率值
-    sequence: 14*14的矩阵,每个元素为0或1
-    patch_threshold: 一个list,里面存放不同的阈值
+        img_tensor - 数据预处理过的tensor格式的图像
+        output - 14*14的矩阵,每个元素为概率值
+        sequence -  14*14的矩阵,每个元素为0或1
+        patch_threshold -  一个list,里面存放不同的阈值
     '''
     img = tensor2im(img_tensor)
     sequence = sequence.detach().cpu().numpy()
@@ -162,8 +162,8 @@ def prob_chart(index_json, outputs):
     绘制模型分类预测的种类概率直方图
     
     Parameters:
-    index_json - 存放类别名称的json文件
-    outputs - 模型分类预测输出
+        index_json - 存放类别名称的json文件
+        outputs - 模型分类预测输出
     '''
     index_dict = {}
     with open(index_json) as f:

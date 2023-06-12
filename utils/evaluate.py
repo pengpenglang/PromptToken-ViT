@@ -7,11 +7,11 @@ def cla_mAP(outputs, labels):
     计算方法参考:https://blog.csdn.net/liubo187/article/details/77406654
     
     Parameters:
-    outputs - 模型预测输出,shape为[batch_size, num_classes]
-    labls - 样本标签,shape为[batch_size, num_classes]
+        outputs - 模型预测输出,shape为[batch_size, num_classes]
+        labls - 样本标签,shape为[batch_size, num_classes]
     
     Returns:
-    res - mAP值
+        res - mAP值
     '''
     _, indices = torch.sort(outputs, dim=0, descending=True)
     res = 0

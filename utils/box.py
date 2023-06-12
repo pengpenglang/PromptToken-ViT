@@ -12,10 +12,10 @@ def patch_to_box(output):
     将预测的patch转换为box
     
     Parameters:
-    output - 模型预测的patch结果,一维张量
+        output - 模型预测的patch结果,一维张量
     
     Returns:
-    box - 坐标列表
+        box - 坐标列表
     '''
     pmap = np.zeros((224, 224, 3))
     for i in range(14):
@@ -42,20 +42,21 @@ def cal_box(forecast, box):
     统计box预测正确与错误的数量
     
     Parameters:
-    forecast - 预测的box坐标列表
-    box - gt box坐标列表
+        forecast - 预测的box坐标列表
+        box - gt box坐标列表
     
     Returns:
-    ac - 预测正确的数量
-    wa - 预测错误的数量
+        ac - 预测正确的数量
+        wa - 预测错误的数量
     '''
 
     def cal_iou(box1, box2):
         '''
         计算两个box的iou
 
-        box1[fxmin, fymin, fxmax, fymax]
-        box2: [xmin, ymin, xmax, ymax]
+        Parameters:
+            box1 - [fxmin, fymin, fxmax, fymax]
+            box2 - [xmin, ymin, xmax, ymax]
         '''
         xmin1, ymin1, xmax1, ymax1 = box1
         xmin2, ymin2, xmax2, ymax2 = box2

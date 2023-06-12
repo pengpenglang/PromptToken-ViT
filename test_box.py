@@ -14,15 +14,15 @@ def get_box(model, images, ids, sequence, threshold, device):
     使用模型预测的patch生成box坐标
     
     Parameters:
-    model - 使用的模型
-    images - 输入的图像二维tensor
-    ids - 输入的图像对应的类别编号
-    sequence - 输入的图像patch概率值序列
-    threshold - 用来两阶段生成box的阈值
-    device - 运行模型的gpu
+        model - 使用的模型
+        images - 输入的图像二维tensor
+        ids - 输入的图像对应的类别编号
+        sequence - 输入的图像patch概率值序列
+        threshold - 用来两阶段生成box的阈值
+        device - 运行模型的gpu
     
     Returns:
-    update_box- 存储输入图像对应的box坐标列表
+        update_box - 存储输入图像对应的box坐标列表
     '''
     outputs = model.localize(images, ids)
     outputs = outputs > threshold[0]

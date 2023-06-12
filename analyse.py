@@ -64,10 +64,10 @@ def attention_visualize(model, images_path, label, class_indices):
     可视化transformer编码层的关注区域
     
     Parameters:
-    model - 使用的预测模型
-    images_path - plot需要加载图像这里设置传入图像路径
-    labl - 图像对应的标签
-    class_indices - 类别索引字典
+        model - 使用的预测模型
+        images_path - plot需要加载图像这里设置传入图像路径
+        labl - 图像对应的标签
+        class_indices - 类别索引字典
     '''
     for i in range(len(label)):
         # 读入RGB图像并resize
